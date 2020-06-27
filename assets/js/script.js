@@ -16,9 +16,9 @@ var fivePM = document.getElementById("5PM");
 //save events to local storage when save button is clicked 
 $(".saveBtn").on("click", function(){
     var text = $(this).siblings(".description").val();
-    var time = $(this).attr("id");
+    var time = $(".description").attr("id");
 
-    localStorage.setItem("event", text, time);
+    localStorage.setItem(time, text);
     
 });
 
