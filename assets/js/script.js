@@ -1,22 +1,22 @@
 const dateElement = document.getElementById("currentDay");
 
 //create variables for all textareas
-var eightAM = document.getElementById("8AM");
-var nineAM = document.getElementById("9AM");
-var tenAM = document.getElementById("10AM");
-var elevenAM = document.getElementById("11AM");
-var twelvePM = document.getElementById("12PM");
-var onePM = document.getElementById("1PM");
-var twoPM = document.getElementById("2PM");
-var threePM = document.getElementById("3PM");
-var fourPM = document.getElementById("4PM");
-var fivePM = document.getElementById("5PM");
+var eightAM = document.getElementById("8am");
+var nineAM = document.getElementById("9am");
+var tenAM = document.getElementById("10am");
+var elevenAM = document.getElementById("11am");
+var twelvePM = document.getElementById("12pm");
+var onePM = document.getElementById("1pm");
+var twoPM = document.getElementById("2pm");
+var threePM = document.getElementById("3pm");
+var fourPM = document.getElementById("4pm");
+var fivePM = document.getElementById("5pm");
 
 
 //save events to local storage when save button is clicked 
 $(".saveBtn").on("click", function(){
     var text = $(this).siblings(".description").val();
-    var time = $(".description").attr("id");
+    var time = $(this).parent().attr("id");
 
     localStorage.setItem(time, text);
     
@@ -157,12 +157,19 @@ checkTime();
 
 //set interval
 var int = setInterval(checkTime, (60*1000)*10);
-console.log("check interval", int);
 
 
 //when page is refreshed, then saved events persist
-$(".description #8AM").val(localStorage.getItem("#8AM"));
-
+$(".description", "#8AM").val(localStorage.getItem("8AM"));
+$(".description", "#9AM").val(localStorage.getItem("9AM"));
+$(".description", "#10AM").val(localStorage.getItem("10AM"));
+$(".description", "#11AM").val(localStorage.getItem("11AM"));
+$(".description", "#12PM").val(localStorage.getItem("12PM"));
+$(".description", "#1PM").val(localStorage.getItem("1PM"));
+$(".description", "#2PM").val(localStorage.getItem("2PM"));
+$(".description", "#3PM").val(localStorage.getItem("3PM"));
+$(".description", "#4PM").val(localStorage.getItem("4PM"));
+$(".description", "#5PM").val(localStorage.getItem("5PM"));
 
 //call functions
 getDateAndTime();
