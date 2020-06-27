@@ -11,6 +11,7 @@ var twoPM = document.getElementById("2PM");
 var threePM = document.getElementById("3PM");
 var fourPM = document.getElementById("4PM");
 var fivePM = document.getElementById("5PM");
+//use counter/iterate through instead?
 
 //display date and time at top of page
 const getDateAndTime = () => {
