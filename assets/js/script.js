@@ -11,7 +11,7 @@ var twoPM = document.getElementById("2PM");
 var threePM = document.getElementById("3PM");
 var fourPM = document.getElementById("4PM");
 var fivePM = document.getElementById("5PM");
-//use counter/iterate through instead?
+//use counter/iterate through instead? make list items instead of divs/rows/columns?
 
 //display date and time at top of page
 const getDateAndTime = () => {
