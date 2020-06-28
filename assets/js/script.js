@@ -1,4 +1,4 @@
-const dateElement = document.getElementById("currentDay");
+var dateElement = document.getElementById("currentDay");
 
 //create variables for all textareas
 var eightAM = document.getElementById("8am");
@@ -11,7 +11,6 @@ var twoPM = document.getElementById("2pm");
 var threePM = document.getElementById("3pm");
 var fourPM = document.getElementById("4pm");
 var fivePM = document.getElementById("5pm");
-
 
 //save events to local storage when save button is clicked 
 $(".saveBtn").on("click", function(){
@@ -152,12 +151,11 @@ var checkTime = function () {
         $(fivePM).addClass("present");
     }
 };
-checkTime();  
 
+checkTime();  
 
 //set interval
 var int = setInterval(checkTime, (60*1000)*10);
-
 
 //when page is refreshed, then saved events persist
 $(".description", "#8AM").val(localStorage.getItem("8AM"));
@@ -173,4 +171,3 @@ $(".description", "#5PM").val(localStorage.getItem("5PM"));
 
 //call functions
 getDateAndTime();
-
